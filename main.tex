@@ -1,5 +1,5 @@
 %-------------------------------------
-% LaTeX Resume Using Template
+% LaTeX Resume
 %-------------------------------------
 
 \documentclass[letterpaper,8pt]{article}[leftmargin=*]
@@ -70,9 +70,9 @@
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.55in}
 \addtolength{\evensidemargin}{-0.55in}
-\addtolength{\textwidth}{1.1in}
+\addtolength{\textwidth}{1.3in}
 \addtolength{\topmargin}{-0.6in}
-\addtolength{\textheight}{1.1in}
+\addtolength{\textheight}{1.0in}
 
 % Define the link colours
 \hypersetup{
@@ -89,33 +89,33 @@
 % Custom commands
 
 % Sections
-\renewcommand{\section}[2]{\vspace{5pt}
+\renewcommand{\section}[2]{\vspace{2pt}
   \colorbox{secondary}{\color{white}\raggedbottom\normalsize\textbf{{#1}{\hspace{7pt}#2}}}
 }
 
 % Entry start and end, for spacing
 \newcommand{\resumeEntryStart}{\begin{itemize}[leftmargin=2.5mm]}
-\newcommand{\resumeEntryEnd}{\end{itemize}\vspace{\entryspacing}}
+\newcommand{\resumeEntryEnd}{\end{itemize}\vspace{0pt}}
 
 % Itemized list for the bullet points under an entry, if necessary
 \newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=4.5mm]}
-\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize} \vspace{0pt}}
 
 % Resume item
 \renewcommand{\labelitemii}{\bulletstyle}
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    {#1 \vspace{-3pt}}
   }
 }
 
 % Entry with title, subheading, date(s), and location
 \newcommand{\resumeEntryTSDL}[4]{
-  \vspace{-1pt}\item[]
+  \vspace{0pt}\item[]
     \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
       \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
       \textit{\color{accent}\small#3} & \textit{\color{accent}\small#4} \\
-    \end{tabularx}\vspace{-6pt}
+    \end{tabularx}\vspace{-8pt}
 }
 
 % Entry with title and date(s)
@@ -123,13 +123,13 @@
   \vspace{-1pt}\item[]
     \begin{tabularx}{0.97\textwidth}{X@{\hspace{60pt}}r}
       \textbf{\color{primary}#1} & {\firabook\color{accent}\small#2} \\
-    \end{tabularx}\vspace{-6pt}
+    \end{tabularx}\vspace{-5pt}
 }
 
 % Entry for special (skills)
 \newcommand{\resumeEntryS}[2]{
   \item[]\small{
-    \textbf{\color{primary}#1 }{ #2 \vspace{-6pt}}
+    \textbf{\color{primary}#1 }{ #2 \vspace{-8pt}}
   }
 }
 
@@ -178,7 +178,7 @@
 %---------------------------------------------------- HEADER ----------------------------------------------------
 
 \headertype{\linkedin}{\github}{\website}{\phone}{\email}{} % Set the order of items here
-\vspace{-10pt} % Set a negative value to push the body up, and the opposite
+\vspace{-13pt} % Set a negative value to push the body up, and the opposite
 
 %-------------------------------------------------- EDUCATION --------------------------------------------------
 \section{\faGraduationCap}{Education}
@@ -186,8 +186,23 @@
   \resumeEntryStart
     \resumeEntryTSDL
       {University of California, Berkeley (Berkeley, CA)}{2019 -- 2023 (expected)}
-      {BA Computer Science in College of Letters and Science}{GPA: 3.46/4.0 (Major GPA: 3.80/4.0)}
+      {BA Computer Science in College of Letters and Science}{Major GPA: 3.80}
   \resumeEntryEnd
+  
+  
+\resumeEntryStart
+    {List of Coursework:}
+\resumeEntryEnd
+\resumeEntryStart
+\begin{tabular}{lrlll}
+Structure/Interpretation of Computer Programs & Data Structures in Java &  &  &  \\
+Designing Information Devices/Systems I \& II & Discrete Math/Probability Theory &  &  &  \\
+Multivariable Calculus & Foundations of Data Science &  &  &  \\
+Intro to Programming (C++) & Intro to Economics &  &  &  \\
+Big Data, Internet of Things &  &  &  & 
+\end{tabular}
+\resumeEntryEnd
+
 
 %-------------------------------------------------- EXPERIENCE --------------------------------------------------
 \section{\faPieChart}{Experience}
@@ -276,8 +291,8 @@
 %-------------------------------------------------- PROGRAMMING SKILLS --------------------------------------------------
 \section{\faGears}{Skills}
  \resumeEntryStart
-  \resumeEntryS{Languages: } {Python, Java, HTML, CSS, JavaScript, SQL, C++}
-  \resumeEntryS{Platform/Tools: } { Seaborn, Pandas, NumPy, SciPy, GUIs, IntelliJ, Eclipse, Git, Adobe Suite, Visual Studio Code, PyCharm, Microsoft Office Suite, LaTeX, Jupyter, Bootstrap, React}
+  \resumeEntryS{Languages: } {Python, Java, HTML, CSS, JavaScript, SQL, C++, LaTeX}
+  \resumeEntryS{Tools and Frameworks: } { Seaborn, Pandas, NumPy, SciPy, Jupyter, Bootstrap, React, Matplotlib}
  \resumeEntryEnd
 
 \end{document}
